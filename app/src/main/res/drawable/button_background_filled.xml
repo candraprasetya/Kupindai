@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2019 Kardusinfo. All Rights Reserved.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ Proprietary and confidential
+  ~ Written by Candra R Prasetya <candraramadhanp@outlook.com>, 11 2019
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="10dp" />
+    <gradient android:startColor="@color/colorPrimary" android:endColor="@color/colorPrimaryDark" android:angle="45"/>
+
+</shape>

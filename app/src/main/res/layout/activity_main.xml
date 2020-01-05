@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:fontFamily="sans-serif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Scan Your Food"
+        android:textStyle="bold"
+        android:textColor="#2A2A2E"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+        <com.wonderkiln.camerakit.CameraView
+            android:padding="10dp"
+            android:id="@+id/cameraView"
+            android:background="@drawable/dialog_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dialog_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/imageViewResult"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Object"
+            android:padding="2dp" />
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:id="@+id/textViewResult"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:maxLines="15"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:background="@drawable/button_background_filled"
+            android:id="@+id/showResultButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/show"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSwitchCamera"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:text="Switch Camera"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_switch_camera_black_24dp" />
+
+        <LinearLayout
+            android:id="@+id/btnScanObject"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background_filled"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="60dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                android:layout_height="60dp"
+                app:lottie_rawRes="@raw/scan"
+                />
+            <TextView
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Detect Now!"/>
+
+        </LinearLayout>
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="80dp"-->
+        <!--            android:layout_marginStart="5dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:drawableStart="@drawable/ic_switch_camera_black_24dp"-->
+        <!--            android:text="Detect Now!"-->
+        <!--            app:cornerRadius="10dp"-->
+        <!--            app:icon="@drawable/ic_all_out_black_24dp" />-->
+
+    </LinearLayout>
+
+</LinearLayout>

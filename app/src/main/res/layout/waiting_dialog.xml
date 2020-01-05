@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/dialog_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:background="@drawable/dialog_background"
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/aviLoaderHolderView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:lottie_rawRes="@raw/waiting"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLoadingRecognition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="10dp"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:text="Recognition Engine Processing ..."
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
